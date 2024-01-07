@@ -8,7 +8,7 @@ from PIL import Image
 from open_ai_objects import llm_dict
 from retriever import custom_tool_list
 
-
+@st.cache_data
 def create_agent(filename: str,llm_name:str,custom_suffix:str, custom_prefix:str):
     """
     Create an agent that can access and use a large language model (LLM).
@@ -41,7 +41,7 @@ def create_agent(filename: str,llm_name:str,custom_suffix:str, custom_prefix:str
 
     return agent
 
-
+@st.cache_data
 def query_agent(agent, query):
     """
     Query an agent and return the response as a string.
