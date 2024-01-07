@@ -143,17 +143,18 @@ data = "data.csv"
 query = st.text_area("Insert your query")
 
 if st.button("Submit Query", type="primary"):
-    # Create an agent from the CSV file.
-    agent = create_agent(data,model_option,prompt_suffix,prompt_prefix)
-
-    print(model_option)
-
-    with get_openai_callback() as cb:
-        # Query the agent.
-        response = query_agent(agent=agent, query=query)
-        st.write(f"Total Cost : Rupees {cb.total_cost*83}")
-    # Decode the response.
-    #decoded_response = decode_response(response)
-
-    # Write the response to the Streamlit app.
-    write_response(response)
+    with st.spinner('Wait for it...'):
+        # Create an agent from the CSV file.
+        agent = create_agent(data,model_option,prompt_suffix,prompt_prefix)
+    
+        print(model_option)
+    
+        with get_openai_callback() as cb:
+            # Query the agent.
+            response = query_agent(agent=agent, query=query)
+            st.write(f"Total Cost : Rupees {cb.total_cost*83}")
+        # Decode the response.
+        #decoded_response = decode_response(response)
+    
+        # Write the response to the Streamlit app.
+        write_response(response)
