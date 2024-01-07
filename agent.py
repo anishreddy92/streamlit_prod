@@ -41,7 +41,6 @@ def create_agent(filename: str,llm_name:str,custom_suffix:str, custom_prefix:str
 
     return agent
 
-@st.cache_data
 def query_agent(agent, query):
     """
     Query an agent and return the response as a string.
