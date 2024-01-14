@@ -8,7 +8,6 @@ from PIL import Image
 from open_ai_objects import llm_dict
 from retriever import custom_tool_list
 
-plt.figure(figsize=(15, 15))
 
 def create_agent(filename: str,llm_name:str,custom_suffix:str, custom_prefix:str):
     """
@@ -57,6 +56,7 @@ def query_agent(agent, query):
 
     # Run the prompt through the agent.
     response = agent.run(query)
+    plt.figure(figsize=(20, 20))
 
     # Save the plot to an in-memory buffer
     plot_buffer = io.BytesIO()
