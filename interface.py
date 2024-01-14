@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.figure(figsize=(6, 6))
 plt.tight_layout()
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 
 
 from PIL import Image
