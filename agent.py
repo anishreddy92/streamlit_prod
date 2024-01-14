@@ -56,7 +56,7 @@ def query_agent(agent, query):
 
     # Run the prompt through the agent.
     response = agent.run(query)
-    plt.figure(figsize=(20, 20))
+    plt.figure(figsize=(10, 10))
 
     # Save the plot to an in-memory buffer
     plot_buffer = io.BytesIO()
