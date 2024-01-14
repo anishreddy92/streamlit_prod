@@ -7,7 +7,10 @@ import json
 from agent import query_agent, create_agent
 from langchain.callbacks import get_openai_callback
 from constants import *
+import matplotlib.pyplot as plt
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
+plt.figure(figsize=(10, 10))
 
 from PIL import Image
 import io
