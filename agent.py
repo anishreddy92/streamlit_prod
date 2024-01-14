@@ -8,7 +8,7 @@ from PIL import Image
 from open_ai_objects import llm_dict
 from retriever import custom_tool_list
 
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(15, 15))
 
 def create_agent(filename: str,llm_name:str,custom_suffix:str, custom_prefix:str):
     """
