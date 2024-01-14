@@ -10,7 +10,7 @@ from constants import *
 import matplotlib.pyplot as plt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-plt.figure(figsize=(6, 10))
+plt.figure(figsize=(6, 6))
 
 from PIL import Image
 import io
