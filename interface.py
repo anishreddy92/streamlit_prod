@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.figure(figsize=(6, 6))
+plt.tight_layout()
+
 
 from PIL import Image
 import io
