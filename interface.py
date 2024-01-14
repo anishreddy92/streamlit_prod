@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.figure(figsize=(6, 6))
 plt.tight_layout()
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
 
 from PIL import Image
@@ -67,8 +67,8 @@ def logout():
     st.session_state["password_correct"] = False
 
 # Sidebar for logout button
-if st.session_state.get("password_correct", False):
-    st.sidebar.button("Log out", on_click=logout)
+# if st.session_state.get("password_correct", False):
+#     st.sidebar.button("Log out", on_click=logout)
 # Function to check if the data represents an image (plot)
 def is_image(data):
     try:
