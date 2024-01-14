@@ -131,7 +131,7 @@ def write_response(response: dict):
 
     for data in mixed_stdout:
         if is_image(data):
-            st.image(data, use_column_width=True)
+            st.image(data, use_column_width="auto")
 
 
 model_option="gpt-3.5-turbo-1106"#st.selectbox(label="Select the model", options=["gpt-3.5-turbo","gpt-3.5-turbo-1106","llm_gpt35_instruct"], args=None, kwargs=None,  placeholder="Choose an option", disabled=False, label_visibility="visible")
