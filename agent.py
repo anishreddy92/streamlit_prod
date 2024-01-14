@@ -60,7 +60,7 @@ def query_agent(agent, query):
 
     # Save the plot to an in-memory buffer
     plot_buffer = io.BytesIO()
-    plt.savefig(plot_buffer, format='jpeg')
+    plt.savefig(plot_buffer, format='png')
     plot_buffer.seek(0)
 
     mixed_output.append(plot_buffer.getvalue())
